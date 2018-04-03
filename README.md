@@ -1,6 +1,12 @@
 # DrinkShaker
 Drinks Recipe iOS Application for CS690 Final Project
 
+Group Name - Drink Shaker
+Group Members - Shayn Hoy, Rushabh Vora
+
+We aim to create an app which contains popular cocktail recipes, and the purpose of this app is to catalog your favourite drinks, interesting recipes, and to look up the most popular cocktail recipes to make yourself. 
+You can add interesting recipes you come across elsewhere, you can add comments to each recipe as well as edit the recipe to your liking.
+
 ************
 Priority 1's
 ************
