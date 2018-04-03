@@ -10,24 +10,24 @@ Feature List:-
 
 Priority 1 (Highest Priority, must have features)
 
-1. Rating System for recipes/cocktails.
-2. Scrollable home page filled with recipes/cocktails.
-3. Ability to edit recipes/cocktails.
-4. Ability to add your own recipes/cocktails.
-5. Ability to delete recipes/cocktails.
-6. Spirit based category system for recipes/cocktails.
-7. Ability to sort by category (spirit type), ratings, added recipes, default recipes.
-8. Attractive UI.
-9. Shake feature - shake your phone to suggest you a cocktail.
+1. Rating System for recipes/cocktails. (4 hours)
+2. Scrollable home page filled with recipes/cocktails. (6 hours)
+3. Ability to edit recipes/cocktails. (3 hours)
+4. Ability to add your own recipes/cocktails. (4 hours)
+5. Ability to delete recipes/cocktails. (3 hours)
+6. Spirit based category system for recipes/cocktails. (7 hours)
+7. Ability to sort by category (spirit type), ratings, added recipes, default recipes. (8 hours)
+8. Attractive UI. (12 hours)
+9. Shake feature - shake your phone to suggest you a cocktail. (8 hours)
 
 
 Priority 2 (Low Priority, nice to have features)
-1. Search recipes/cocktails by name (ingredients planned, lower priority).
-2. Recipe/cocktail suggestions.
-3. Place where cocktail/recipe is from.
-4. Comments on recipe/cocktail.
-5. Allow user to add base spirit type to categories.
-6. Attach photos to a recipe/cocktail.
+1. Search recipes/cocktails by name (ingredients planned, lower priority). (9 hours)
+2. Recipe/cocktail suggestions. (6 hours)
+3. Place where cocktail/recipe is from. (3 hours)
+4. Comments on recipe/cocktail. (3 hours)
+5. Allow user to add base spirit type to categories. (7 hours)
+6. Attach photos to a recipe/cocktail. (10 hours)
 
 
 ### Wire Frames
