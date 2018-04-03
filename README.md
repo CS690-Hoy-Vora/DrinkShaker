@@ -28,3 +28,11 @@ Priority 2 (Low Priority, nice to have features)
 4. Comments on recipe/cocktail.
 5. Allow user to add base spirit type to categories.
 6. Attach photos to a recipe/cocktail.
+
+
+### Wire Frames
+
+![image uploaded from ios 1](https://user-images.githubusercontent.com/21266455/38232862-71618e1a-36cd-11e8-8881-3fdb3beca924.jpg)
+![image uploaded from ios 2](https://user-images.githubusercontent.com/21266455/38232890-9bff8b04-36cd-11e8-9ff0-1bb3976ec6d5.jpg)
+![image uploaded from ios](https://user-images.githubusercontent.com/21266455/38232899-a45d65e6-36cd-11e8-8957-ad1e91f65bd4.jpg)
+
