@@ -26,16 +26,24 @@ class AllDrinksController: UITableViewController {
         return drinks.count
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
+//
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let drink = drinks[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell") as! customCell
+        
         
         cell.drinkName.text = drink
         cell.photo.image = #imageLiteral(resourceName: "cosmo")
         cell.rating.text = "Rating: 1/5"
         cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
         //cell.textLabel?.text = drink
+        performSegue(withIdentifier: "drinkInfoSegue", sender: self)
+
         return cell
     }
 }

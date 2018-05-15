@@ -19,6 +19,7 @@
 		8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */; };
 		8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */; };
 		8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6920AB4F970055BEE8 /* AboutController.swift */; };
+		8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
 		8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkController.swift; sourceTree = "<group>"; };
 		8BC96E6920AB4F970055BEE8 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */,
 				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
 				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
+				8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */,
 				8BC96E6220AB41470055BEE8 /* customCell.swift in Sources */,
 				8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */,
+				8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */,
 				8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */,
 				8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */,
 			);
