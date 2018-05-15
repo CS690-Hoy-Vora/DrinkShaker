@@ -13,6 +13,7 @@ class DrinkInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 178/255, green: 178/255, blue: 122/255, alpha: 1)
+    
     }
     
     
