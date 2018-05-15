@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class allCell: UITableViewCell {
     
@@ -16,15 +15,14 @@ class allCell: UITableViewCell {
 
 class AllDrinksController: UITableViewController {
     
-    var drinks = [Drinks]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinks.count
+        
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,14 +31,12 @@ class AllDrinksController: UITableViewController {
 //
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let drink = drinks[indexPath.row]
+        
         
 
 //      let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell") as! customCell
-        
-        cell.drinkName.text = drink
 
         cell.photo.image = #imageLiteral(resourceName: "cosmo")
         cell.rating.text = "Rating: 1/5"

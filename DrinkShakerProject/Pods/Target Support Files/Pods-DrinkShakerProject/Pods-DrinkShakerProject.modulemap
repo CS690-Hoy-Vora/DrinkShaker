@@ -1,0 +1,6 @@
+framework module Pods_DrinkShakerProject {
+  umbrella header "Pods-DrinkShakerProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
