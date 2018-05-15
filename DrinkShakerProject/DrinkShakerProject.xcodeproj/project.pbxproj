@@ -87,16 +87,9 @@
 		8B8CBA772086AD310032E867 /* DrinkShakerProject */ = {
 			isa = PBXGroup;
 			children = (
-				8B8CBA782086AD310032E867 /* AppDelegate.swift */,
-				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
-				8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */,
-				8B8CBA7C2086AD310032E867 /* Main.storyboard */,
-				8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */,
-				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
-				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
-				8BC96E6120AB41470055BEE8 /* customCell.swift */,
-				8B8CBA7F2086AD310032E867 /* Assets.xcassets */,
-				8B8CBA812086AD310032E867 /* LaunchScreen.storyboard */,
+				8BC96E6D20AB642E0055BEE8 /* View */,
+				8BC96E6C20AB641F0055BEE8 /* Model */,
+				8BC96E6B20AB640E0055BEE8 /* Controllers */,
 				8B8CBA842086AD310032E867 /* Info.plist */,
 			);
 			path = DrinkShakerProject;
@@ -109,6 +102,37 @@
 				8B8CBA8F2086AD310032E867 /* Info.plist */,
 			);
 			path = DrinkShakerProjectTests;
+			sourceTree = "<group>";
+		};
+		8BC96E6B20AB640E0055BEE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B8CBA782086AD310032E867 /* AppDelegate.swift */,
+				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
+				8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */,
+				8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */,
+				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
+				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8BC96E6C20AB641F0055BEE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BC96E6120AB41470055BEE8 /* customCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BC96E6D20AB642E0055BEE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B8CBA7C2086AD310032E867 /* Main.storyboard */,
+				8B8CBA7F2086AD310032E867 /* Assets.xcassets */,
+				8B8CBA812086AD310032E867 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,11 +400,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N78J6BJEHS;
 				INFOPLIST_FILE = DrinkShakerProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hoy.DrinkShakerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -391,11 +416,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N78J6BJEHS;
 				INFOPLIST_FILE = DrinkShakerProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hoy.DrinkShakerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
