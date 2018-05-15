@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510400E320AB573000E29DE4 /* DrinksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 510400E120AB573000E29DE4 /* DrinksDataModel.xcdatamodeld */; };
 		8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA782086AD310032E867 /* AppDelegate.swift */; };
 		8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7A2086AD310032E867 /* ViewController.swift */; };
 		8B8CBA7E2086AD310032E867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7C2086AD310032E867 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510400E220AB573000E29DE4 /* DrinksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrinksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		8B8CBA752086AD310032E867 /* DrinkShakerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkShakerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8CBA782086AD310032E867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8CBA7A2086AD310032E867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		510400DE20AB548E00E29DE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				510400E120AB573000E29DE4 /* DrinksDataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */,
+				510400E320AB573000E29DE4 /* DrinksDataModel.xcdatamodeld in Sources */,
 				8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +476,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		510400E120AB573000E29DE4 /* DrinksDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				510400E220AB573000E29DE4 /* DrinksDataModel.xcdatamodel */,
+			);
+			currentVersion = 510400E220AB573000E29DE4 /* DrinksDataModel.xcdatamodel */;
+			path = DrinksDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B8CBA6D2086AD310032E867 /* Project object */;
 }
