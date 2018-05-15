@@ -17,6 +17,11 @@ class allCell: UITableViewCell {
 class AllDrinksController: UITableViewController {
     
     var drinks = [Drinks]()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.rowHeight = 200
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count
@@ -26,10 +31,16 @@ class AllDrinksController: UITableViewController {
         
         let drink = drinks[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath)
+
+//      let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath)
         
-        cell.textLabel?.text = drink.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell") as! customCell
         
+        cell.photo.image = #imageLiteral(resourceName: "cosmo")
+        cell.rating.text = "Rating: 1/5"
+        cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
+        //cell.textLabel?.text = drink
+
         return cell
     }
 }
