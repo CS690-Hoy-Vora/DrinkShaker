@@ -56,6 +56,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		510400DE20AB548E00E29DE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		510400DF20AB549500E29DE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B8CBA7C2086AD310032E867 /* Main.storyboard */,
+				8B8CBA7F2086AD310032E867 /* Assets.xcassets */,
+				8B8CBA812086AD310032E867 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		510400E020AB549C00E29DE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B8CBA782086AD310032E867 /* AppDelegate.swift */,
+				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8B8CBA6C2086AD310032E867 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +103,9 @@
 		8B8CBA772086AD310032E867 /* DrinkShakerProject */ = {
 			isa = PBXGroup;
 			children = (
-				8B8CBA782086AD310032E867 /* AppDelegate.swift */,
-				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
-				8B8CBA7C2086AD310032E867 /* Main.storyboard */,
-				8B8CBA7F2086AD310032E867 /* Assets.xcassets */,
-				8B8CBA812086AD310032E867 /* LaunchScreen.storyboard */,
+				510400E020AB549C00E29DE4 /* Controller */,
+				510400DF20AB549500E29DE4 /* View */,
+				510400DE20AB548E00E29DE4 /* Model */,
 				8B8CBA842086AD310032E867 /* Info.plist */,
 			);
 			path = DrinkShakerProject;
