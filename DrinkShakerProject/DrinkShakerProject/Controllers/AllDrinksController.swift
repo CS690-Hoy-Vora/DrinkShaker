@@ -26,7 +26,9 @@ class AllDrinksController: UITableViewController {
         let drink = drinks[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell")!
-        cell.textLabel?.text = drink
+        
+        
+        //cell.textLabel?.text = drink
         return cell
     }
 }
