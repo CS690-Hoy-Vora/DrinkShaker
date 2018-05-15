@@ -11,6 +11,9 @@ import UIKit
 class customCell: UITableViewCell {
 
     @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var drinkName: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var ingredients: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
