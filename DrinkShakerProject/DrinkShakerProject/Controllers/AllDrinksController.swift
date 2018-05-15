@@ -25,9 +25,9 @@ class AllDrinksController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let drink = drinks[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell") as! customCell
         
-        
+        cell.photo.image = #imageLiteral(resourceName: "cosmo")
         //cell.textLabel?.text = drink
         return cell
     }
