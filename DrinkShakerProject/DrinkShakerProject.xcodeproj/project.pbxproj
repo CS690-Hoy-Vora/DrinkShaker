@@ -20,6 +20,7 @@
 		8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */; };
 		8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6920AB4F970055BEE8 /* AboutController.swift */; };
 		8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */; };
+		8BC96E7120ABB8370055BEE8 /* categoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E7020ABB8370055BEE8 /* categoryViewCell.swift */; };
 		989248ECC41AAD46FFC014DC /* Pods_DrinkShakerProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05638434B1F58328C8B70449 /* Pods_DrinkShakerProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkController.swift; sourceTree = "<group>"; };
 		8BC96E6920AB4F970055BEE8 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoController.swift; sourceTree = "<group>"; };
+		8BC96E7020ABB8370055BEE8 /* categoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryViewCell.swift; sourceTree = "<group>"; };
 		8FEDE1DEDE680BD6C61274BE /* Pods-DrinkShakerProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProject/Pods-DrinkShakerProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C1505B7DD212BA752DDFCE23 /* Pods-DrinkShakerProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProjectTests/Pods-DrinkShakerProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				8BC96E6120AB41470055BEE8 /* customCell.swift */,
+				8BC96E7020ABB8370055BEE8 /* categoryViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */,
 				8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */,
 				8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */,
+				8BC96E7120ABB8370055BEE8 /* categoryViewCell.swift in Sources */,
 				8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
