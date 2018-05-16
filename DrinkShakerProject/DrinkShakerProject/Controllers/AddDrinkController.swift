@@ -5,14 +5,18 @@ import RealmSwift
 class AddDrinkController: UIViewController{
     
     @IBOutlet weak var getName: UITextField!
+    @IBOutlet weak var getPhotoFile: UITextField!
     @IBOutlet weak var getLocation: UITextField!
     @IBOutlet weak var getNotes: UITextView!
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
     var text = ""
     @IBAction func getValues ()
     {
@@ -23,5 +27,4 @@ class AddDrinkController: UIViewController{
     
     
     let drink = Drinks()
-    
 }

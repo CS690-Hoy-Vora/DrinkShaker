@@ -18,10 +18,11 @@ class AllDrinksController: UITableViewController {
         tableView.rowHeight = 200
     }
     
- //   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
- //
- //   }
-    
+/*    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    */
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //
 //    }
