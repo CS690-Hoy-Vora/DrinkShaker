@@ -13,16 +13,16 @@ class allCell: UITableViewCell {
     
 }
 
-class AllDrinksController: UITableViewController {
+class AllDrinksController: UITableViewController, ClassAddDrinkDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
     }
-    var drinks: [String] = ["cosmopolitan", "martini", "jack"]
-    var ingredientsList: [String] = [""]
+    var drinks: [String] = ["cosmopolitan", "martini", "jack", ""]
+    var ingredientsList: [String] = ["", "", "", ""]
     var ratingList : [String] = ["4/5", "3/5", "4/5", "2/5"]
-    var photoList : [UIImage] = [#imageLiteral(resourceName: "cosmo")]
+    var photoList : [UIImage] = [#imageLiteral(resourceName: "cosmo"),#imageLiteral(resourceName: "cosmo"),#imageLiteral(resourceName: "cosmo"),#imageLiteral(resourceName: "cosmo")]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count

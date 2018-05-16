@@ -16,7 +16,6 @@
 		8B8CBA8E2086AD310032E867 /* DrinkShakerProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA8D2086AD310032E867 /* DrinkShakerProjectTests.swift */; };
 		8BC96E6220AB41470055BEE8 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6120AB41470055BEE8 /* customCell.swift */; };
 		8BC96E6420AB494D0055BEE8 /* AllDrinksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */; };
-		8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */; };
 		8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */; };
 		8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6920AB4F970055BEE8 /* AboutController.swift */; };
 		8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */; };
@@ -51,7 +50,6 @@
 		8B8CBA8F2086AD310032E867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BC96E6120AB41470055BEE8 /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDrinksController.swift; sourceTree = "<group>"; };
-		8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
 		8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkController.swift; sourceTree = "<group>"; };
 		8BC96E6920AB4F970055BEE8 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInfoController.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			children = (
 				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
 				8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */,
-				8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */,
 				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
 				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
 				8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */,
@@ -342,7 +339,6 @@
 				8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */,
 				8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */,
 				8BC96E6220AB41470055BEE8 /* customCell.swift in Sources */,
-				8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */,
 				8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */,
 				8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */,
 				8BC96E7120ABB8370055BEE8 /* categoryViewCell.swift in Sources */,
