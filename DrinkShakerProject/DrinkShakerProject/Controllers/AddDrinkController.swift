@@ -12,6 +12,9 @@ class AddDrinkController: UIViewController{
     @IBOutlet weak var getIngredients: UITextView!
     
     
+    
+    var AllDrinksController:AllDrinksController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,6 +26,7 @@ class AddDrinkController: UIViewController{
         let rating : String = getRating.text!
        // let notes : String = getNotes.text!
        // let location : String = getLocation.text!
+        AllDrinksController?.addData(data1 : name, data2 : ingredients, data3 : rating)
         
     }
     

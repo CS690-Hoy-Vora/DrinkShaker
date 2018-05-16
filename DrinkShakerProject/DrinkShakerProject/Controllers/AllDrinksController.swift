@@ -26,6 +26,13 @@ class AllDrinksController: UITableViewController {
     var ratingList : [String] = ["Rating: 4/5", "Rating: 3/5", "Rating: 4/5", "Rating: 2/5", "Rating: 5/5", "Rating: 4/5", "Rating: 3/5", "Rating: 4/5"]
     var photoList : [UIImage] = [#imageLiteral(resourceName: "cosmo"), #imageLiteral(resourceName: "martini"), #imageLiteral(resourceName: "jd"), #imageLiteral(resourceName: "marg"), #imageLiteral(resourceName: "bloody"), #imageLiteral(resourceName: "mojito"), #imageLiteral(resourceName: "manhattan"), #imageLiteral(resourceName: "drop") ]
     
+    func addData(data1: String, data2 : String, data3: String) {
+        drinks.append(data1)
+        ingredientsList.append(data2)
+        ratingList.append(data3)
+        photoList.append(#imageLiteral(resourceName: "marg"))
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count
     }
