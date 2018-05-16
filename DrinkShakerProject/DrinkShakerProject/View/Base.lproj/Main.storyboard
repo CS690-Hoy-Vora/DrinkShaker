@@ -216,6 +216,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97265625" green="0.34241818396133306" blue="0.072228219660188012" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="drinkName" destination="kfx-lu-gZe" id="wiL-FL-XvH"/>
                                     <outlet property="ingredients" destination="qmO-sE-BUu" id="V9U-zS-X12"/>
@@ -320,6 +321,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.50178511052293839" green="0.74046429751527776" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="vmT-xw-ik7" kind="relationship" relationship="viewControllers" id="1Xa-HZ-LN3"/>
