@@ -19,10 +19,11 @@ class AllDrinksController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 200
     }
-    var drinks: [String] = ["cosmopolitan", "martini", "jack"]
-    var ingredientsList: [String] = [""]
-    var ratingList : [String] = ["4/5", "3/5", "4/5", "2/5"]
-    var photoList : [UIImage] = [#imageLiteral(resourceName: "cosmo")]
+    var drinks: [String] = ["Cosmopolitan", "Martini", "Jack and Coke", "Margarita", "Bloody Mary", "Mojito", "Manhattan", "Lemon Drop"]
+    var ingredientsList: [String] = ["1/2 oz lime juice \n1/4 oz cranberry juice \n1 1/2 oz vodka\nShake Well", "1/4 oz dry vermouth \n2 oz vodka or gin \nStir", "1 1/2 oz Jack Daniels \nFill with ice and coke", "3/4 oz lime juice \n1/4 oz tripel sec \n2 oz tequila", "1 1/2 oz vodka \n1/2 oz lemon juice \n1/4 oz olive juice \ndash of tobasco \nTop off with tomato juice \nshake well", "1 sugar cube \n6-8 mint leaves \n3/4oz lime juice \n muddle \nshake well \nstrain over ice", "2 oz of bourbon or rye \n3-4 dashes of angostura bitters \nstir and strain into martini glass", "3/4 oz lemon juice \n1/2 oc simple syrup \n1/2 oz tripel sec \n1 1/2oz of vodka \nshake well and strain into sugar rimmed glass"]
+    
+    var ratingList : [String] = ["Rating: 4/5", "Rating: 3/5", "Rating: 4/5", "Rating: 2/5", "Rating: 5/5", "Rating: 4/5", "Rating: 3/5", "Rating: 4/8"]
+    var photoList : [UIImage] = [#imageLiteral(resourceName: "cosmo"), #imageLiteral(resourceName: "martini"), #imageLiteral(resourceName: "jd"), #imageLiteral(resourceName: "marg"), #imageLiteral(resourceName: "bloody"), #imageLiteral(resourceName: "mojito"), #imageLiteral(resourceName: "manhattan"), #imageLiteral(resourceName: "drop") ]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count
