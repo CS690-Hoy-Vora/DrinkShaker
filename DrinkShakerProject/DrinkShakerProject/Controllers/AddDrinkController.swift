@@ -1,9 +1,7 @@
 
 import UIKit
 
-protocol ClassAddDrinkDelegate : class {
-    func addInformation(name1 : String, ingr1 : String, rate1 : String)
-}
+
 class AddDrinkController: UIViewController{
     
     @IBOutlet weak var getName: UITextField!
@@ -13,7 +11,9 @@ class AddDrinkController: UIViewController{
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
     
-    weak var delegate: ClassAddDrinkDelegate?
+    
+    
+    var AllDrinksController:AllDrinksController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,8 @@ class AddDrinkController: UIViewController{
         let rating : String = getRating.text!
        // let notes : String = getNotes.text!
        // let location : String = getLocation.text!
-        delegate?.addInformation(name1: name, ingr1: ingredients, rate1: rating)
+        AllDrinksController?.addData(data1 : name, data2 : ingredients, data3 : rating)
+        
     }
     
     
