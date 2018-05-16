@@ -1,5 +1,6 @@
 
 import UIKit
+import RealmSwift
 
 class AddDrinkController: UIViewController{
     
@@ -15,4 +16,15 @@ class AddDrinkController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    var text = ""
+    @IBAction func getValues ()
+    {
+        text = getName.text!
+    }
+    
+    let realm = try! Realm()
+    
+    
+    let drink = Drinks()
 }

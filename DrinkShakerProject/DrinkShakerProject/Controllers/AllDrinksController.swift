@@ -7,14 +7,11 @@
 //
 
 import UIKit
-
-class allCell: UITableViewCell {
-    
-    
-}
+import RealmSwift
 
 class AllDrinksController: UITableViewController {
     
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +22,7 @@ class AllDrinksController: UITableViewController {
         
     }
     */
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //
 //    }
