@@ -17,7 +17,31 @@ class Drinks : Object {
     @objc dynamic var notes : String = ""
     @objc dynamic var photo : String = ""
     
-    init(name : String, ingredients : String, rating : Int, location : String, notes : String, photo : String )
+    init()
+    {
+        self.name = ""
+        self.ingredients = ""
+        
+        if rating > 5 {
+            self.rating = 5
+        }
+        else if rating < 0
+        {
+            self.rating = 0
+        }
+        else
+        {
+            self.rating = 0
+        }
+        
+        self.location = ""
+        
+        self.notes = ""
+        
+        self.photo = ""
+    }
+    
+    func setValues(name : String, ingredients : String, rating : Int, location : String, notes : String, photo : String)
     {
         self.name = name
         self.ingredients = ingredients
@@ -40,5 +64,4 @@ class Drinks : Object {
         
         self.photo = photo
     }
-    
 }
