@@ -2,7 +2,7 @@
 import UIKit
 
 protocol ClassAddDrinkDelegate : class {
-    func addInformation(name1 : String, ingr1 : String, rate1 : String, note1 : String, location1 : String)
+    func addInformation(name1 : String, ingr1 : String, rate1 : String)
 }
 class AddDrinkController: UIViewController{
     
@@ -19,13 +19,14 @@ class AddDrinkController: UIViewController{
         super.viewDidLoad()
     }
     
+    
     @IBAction func saveDrink(_ sender: UIButton) {
         let name : String = getName.text!
         let ingredients : String = getIngredients.text!
         let rating : String = getRating.text!
-        let notes : String = getNotes.text!
-        let location : String = getLocation.text!
-        delegate?.addInformation(name1: name, ingr1: ingredients, rate1: rating, note1: notes, location1: location)
+       // let notes : String = getNotes.text!
+       // let location : String = getLocation.text!
+        delegate?.addInformation(name1: name, ingr1: ingredients, rate1: rating)
     }
     
     
