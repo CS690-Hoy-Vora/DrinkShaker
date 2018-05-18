@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4496520B35184980DE082B63 /* Pods_DrinkShakerProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BABAC8718E2435518BBA2F /* Pods_DrinkShakerProjectTests.framework */; };
+		8B849A2920AF72E80057C616 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B849A2820AF72E80057C616 /* SplashController.swift */; };
 		8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA782086AD310032E867 /* AppDelegate.swift */; };
 		8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7A2086AD310032E867 /* ViewController.swift */; };
 		8B8CBA7E2086AD310032E867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7C2086AD310032E867 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		196BCB4224FB5CF5EC6A9F44 /* Pods-DrinkShakerProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProjectTests/Pods-DrinkShakerProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		45BABAC8718E2435518BBA2F /* Pods_DrinkShakerProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinkShakerProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		742CE2316C6578549F693A3D /* Pods-DrinkShakerProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProject/Pods-DrinkShakerProject.release.xcconfig"; sourceTree = "<group>"; };
+		8B849A2820AF72E80057C616 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8B8CBA752086AD310032E867 /* DrinkShakerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkShakerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8CBA782086AD310032E867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8CBA7A2086AD310032E867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
 				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
 				8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */,
+				8B849A2820AF72E80057C616 /* SplashController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */,
 				8BC96E7120ABB8370055BEE8 /* categoryViewCell.swift in Sources */,
 				8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */,
+				8B849A2920AF72E80057C616 /* SplashController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lay-S2-eyK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tWs-cu-w8t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -230,6 +230,7 @@
                                     <outlet property="ingredients" destination="qmO-sE-BUu" id="V9U-zS-X12"/>
                                     <outlet property="photo" destination="EIl-S9-qae" id="JQd-uq-z1g"/>
                                     <outlet property="rating" destination="mQV-zB-9rc" id="Frz-4b-TOr"/>
+                                    <segue destination="agL-xP-wqa" kind="show" id="yJI-xw-cOQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -240,9 +241,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="All Drinks" id="f9j-V8-nbz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="agL-xP-wqa" kind="show" identifier="drinkInfoSegue" id="5yt-Lz-Yo5"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFe-Wu-Oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,7 +294,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="vmT-xw-ik7" kind="show" id="XRo-CX-IwO"/>
+                                    <segue destination="vmT-xw-ik7" kind="show" id="xCW-xn-zXc"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iu8-fY-k3k">
@@ -319,6 +317,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9H-Ic-nPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="703.20000000000005" y="-335.08245877061472"/>
+        </scene>
+        <!--Splash Controller-->
+        <scene sceneID="LvA-Mr-mfj">
+            <objects>
+                <viewController id="tWs-cu-w8t" customClass="SplashController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="188-jm-Ibo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB0-xT-E4o">
+                                <rect key="frame" x="143" y="298" width="89" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter!"/>
+                                <connections>
+                                    <segue destination="lay-S2-eyK" kind="show" id="8eg-DC-ig6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drink Shaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAd-hg-Sby">
+                                <rect key="frame" x="84" y="45" width="206" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="pmV-ri-u3A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="992-LP-z6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2548" y="739.88005997001505"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="H9g-sk-ycl">
@@ -346,6 +376,6 @@
         <image name="black&amp;whiteImg" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Xa-HZ-LN3"/>
+        <segue reference="xCW-xn-zXc"/>
     </inferredMetricsTieBreakers>
 </document>
