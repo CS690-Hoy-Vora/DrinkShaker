@@ -467,7 +467,7 @@
         <!--Categories-->
         <scene sceneID="MzW-5l-CTv">
             <objects>
-                <viewController id="cCB-NN-CEO" sceneMemberID="viewController">
+                <viewController id="cCB-NN-CEO" customClass="CategoriesController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k7s-ft-2WG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
