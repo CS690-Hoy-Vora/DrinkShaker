@@ -46,4 +46,8 @@ class AllDrinksController: UITableViewController {
 
         return cell
     }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print("SHaken!!!!!!")
+    }
 }
