@@ -2,7 +2,7 @@
 import UIKit
 import RealmSwift
 
-class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
     @IBOutlet weak var getName: UITextField!
     @IBOutlet weak var getLocation: UITextField!
@@ -15,8 +15,13 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var getPhoto: UIImageView!
     
     @IBOutlet weak var imageLabel: UILabel!
+    @IBOutlet weak var clearButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getNotes.delegate = self
+        getIngredients.delegate = self
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -39,6 +44,11 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         
         present(controller, animated: true, completion: nil)
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+    
     var text = ""
     @IBAction func getValues ()
     {
