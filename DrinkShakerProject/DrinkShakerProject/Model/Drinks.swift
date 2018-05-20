@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Drinks : Object {
+/*class Drinks : Object {
     @objc dynamic var name : String = ""
     @objc dynamic var ingredients : String = ""
     @objc dynamic var rating : Int = 0
@@ -65,3 +65,4 @@ class Drinks : Object {
         self.photo = photo
     }
 }
+*/

@@ -26,5 +26,5 @@ class AddDrinkController: UIViewController{
     let realm = try! Realm()
     
     
-    let drink = Drinks()
+   // let drink = Drinks()
 }
