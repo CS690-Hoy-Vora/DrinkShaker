@@ -18,7 +18,7 @@ class AllDrinksController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         loadDrinks()
     }
     
@@ -41,12 +41,14 @@ class AllDrinksController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! customCell
 
         cell.drinkName?.text = drinkItems?[indexPath.row].name ?? "No Drinks in Recipe Book"
-        cell.photo.image = #imageLiteral(resourceName: "cosmo")
-        cell.rating.text = "Rating: 1/5"
-        cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
-        //cell.textLabel?.text = drink
+        cell.ingredients?.text = drinkItems?[indexPath.row].ingredients
+        cell.rating?.text = "\(drinkItems![indexPath.row].rating)/5"
+//        cell.photo.image = #imageLiteral(resourceName: "cosmo")
+//        cell.rating.text = "Rating: 1/5"
+//        cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
+//        cell.textLabel?.text = drink
 
-        performSegue(withIdentifier: "drinkInfoSegue", sender: self)
+//        performSegue(withIdentifier: "drinkInfoSegue", sender: self)
 
 
         return cell
