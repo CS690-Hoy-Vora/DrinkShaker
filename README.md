@@ -1,3 +1,18 @@
+Final Submission Updates
+
+Priority 1 features have been implemented with the exception of delete drinks.
+Some priority 2 features have been implemented (place where drink is from, photo attach to each drink, comment section)
+
+Most of the collaboration has been done in person, as we sat together for majority of the coding time, at Rushabh's place.
+
+Issues - 
+
+1) Persistent data implementation. By far the biggest issue. Once this was solved, rest of the pieces fell into place. Tried using NSData, Core Data, finally settled on Realm.io
+2) Getting images successfully saved, as well as successfully retrieved for display.
+
+Cocoapods was utilised, only pod utilised is realm.io. Due to which build time can be longer than expected
+
+
 # DrinkShaker
 Drinks Recipe iOS Application for CS690 Final Project
 
