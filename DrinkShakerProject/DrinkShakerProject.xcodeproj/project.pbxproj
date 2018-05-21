@@ -10,6 +10,7 @@
 		4496520B35184980DE082B63 /* Pods_DrinkShakerProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BABAC8718E2435518BBA2F /* Pods_DrinkShakerProjectTests.framework */; };
 		5104010920AB9FB000E29DE4 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104010820AB9FB000E29DE4 /* Drinks.swift */; };
 		8B05B0CB20AF8524003C1AED /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05B0CA20AF8523003C1AED /* SplashController.swift */; };
+		8B0AF02920B23BC400039BFC /* LiquorChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF02820B23BC400039BFC /* LiquorChoiceViewController.swift */; };
 		8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA782086AD310032E867 /* AppDelegate.swift */; };
 		8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7A2086AD310032E867 /* ViewController.swift */; };
 		8B8CBA7E2086AD310032E867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8CBA7C2086AD310032E867 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		5104010820AB9FB000E29DE4 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 		742CE2316C6578549F693A3D /* Pods-DrinkShakerProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProject/Pods-DrinkShakerProject.release.xcconfig"; sourceTree = "<group>"; };
 		8B05B0CA20AF8523003C1AED /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		8B0AF02820B23BC400039BFC /* LiquorChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquorChoiceViewController.swift; sourceTree = "<group>"; };
 		8B8CBA752086AD310032E867 /* DrinkShakerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkShakerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8CBA782086AD310032E867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8CBA7A2086AD310032E867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */,
 				8B05B0CA20AF8523003C1AED /* SplashController.swift */,
 				8BA0AD6120B1C3CB003CC99B /* PopupViewController.swift */,
+				8B0AF02820B23BC400039BFC /* LiquorChoiceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				8B05B0CB20AF8524003C1AED /* SplashController.swift in Sources */,
 				8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */,
 				8BC96E6A20AB4F970055BEE8 /* AboutController.swift in Sources */,
+				8B0AF02920B23BC400039BFC /* LiquorChoiceViewController.swift in Sources */,
 				8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

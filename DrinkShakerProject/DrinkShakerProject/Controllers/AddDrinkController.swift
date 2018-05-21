@@ -2,7 +2,7 @@
 import UIKit
 import RealmSwift
 
-class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
     
     @IBOutlet weak var getName: UITextField!
     @IBOutlet weak var getLocation: UITextField!
@@ -10,13 +10,16 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
     
-    @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var getPhoto: UIImageView!
     
     @IBOutlet weak var imageLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetView()
+        getNotes.delegate = self
+        getIngredients.delegate = self
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -39,6 +42,29 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         
         present(controller, animated: true, completion: nil)
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+    }
+    @IBAction func clearButton(_ sender: Any) {
+        resetView()
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        resetView()
+    }
+    
+    
+    
+    //resets the view to its original state
+    func resetView(){
+        getName.text = "Enter Drink Name"
+        getLocation.text = "Enter Where to Buy From"
+        getNotes.text = "Additional Notes"
+        getRating.text = "Enter a rating between 1 and 5"
+        getIngredients.text = "Enter Ingredients"
+    }
+    
     var text = ""
     @IBAction func getValues ()
     {
