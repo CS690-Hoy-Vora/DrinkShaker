@@ -6,8 +6,10 @@ class CategoryChosenController:UIViewController{
     
     var liquorType: String?
     
-    @IBAction func liquorTypeTest(_ sender: Any) {
-        print(liquorType!)
+
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
     }
     
 }
