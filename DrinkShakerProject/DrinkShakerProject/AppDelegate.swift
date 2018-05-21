@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let drinkItems: Results<Drinks>?
         drinkItems = realm.objects(Drinks.self)
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         if drinkItems!.count <= 0 {
       
         do {

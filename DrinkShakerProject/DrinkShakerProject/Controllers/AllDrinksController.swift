@@ -47,8 +47,22 @@ class AllDrinksController: UITableViewController {
         cell.drinkName?.text = drinkItems?[indexPath.row].name ?? "No Drinks in Recipe Book"
         cell.ingredients?.text = drinkItems?[indexPath.row].ingredients
         cell.rating?.text = "Rating: \(drinkItems![indexPath.row].rating)/5"
+        cell.photo?.image = getImage(index: indexPath.row)
 
         return cell
+    }
+    
+    func getImage(index : Int) -> UIImage {
+        let fileManager = FileManager.default
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let imagePath = "\(documentsDirectory)/\(drinkItems![index].photo)"
+        if fileManager.fileExists(atPath: imagePath) && drinkItems![index].photo != ""{
+            return UIImage(contentsOfFile: imagePath)!
+        }
+        else{
+            return #imageLiteral(resourceName: "manhattan")
+        }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
