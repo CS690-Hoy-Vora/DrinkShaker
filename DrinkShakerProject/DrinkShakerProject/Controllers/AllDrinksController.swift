@@ -34,6 +34,7 @@ class AllDrinksController: UITableViewController {
         let destinationVC = segue.destination as! DrinkInfoController
         
         destinationVC.indexPath = Int(tableView.indexPathForSelectedRow!.row)
+        destinationVC.indexPath = destinationVC.indexPath - 1
     }
 
     
