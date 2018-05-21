@@ -19,17 +19,19 @@ class DrinkInfoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 178/255, green: 178/255, blue: 122/255, alpha: 1)
     
         loadDrink()
     }
     
     func loadDrink() {
         drinkItems = realm.objects(Drinks.self)
-        drinkInfoName.text = drinkItems![indexPath].name
-        infoNotes.text = drinkItems![indexPath].notes
-        infoRating.text = String(drinkItems![indexPath].rating)
-        infoRecipe.text = drinkItems![indexPath].ingredients
-        infoLocation.text = drinkItems![indexPath].location
+        drinkInfoName.text = "Drink Name:\n\(drinkItems![indexPath].name)"
+        infoNotes.text = "Notes:\n\(drinkItems![indexPath].notes)"
+        infoRating.text = "Rating: 1/\(String(drinkItems![indexPath].rating))"
+        infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
+        infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
+    }
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
