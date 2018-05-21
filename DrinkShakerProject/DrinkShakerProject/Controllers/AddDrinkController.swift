@@ -10,7 +10,6 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
     @IBOutlet weak var getPhoto: UIImageView!
-    @IBOutlet weak var imageLabel: UILabel!
     
     let realm = try! Realm()
     var randomPath : String = ""

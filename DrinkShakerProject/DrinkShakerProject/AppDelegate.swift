@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let drinkItems: Results<Drinks>?
         drinkItems = realm.objects(Drinks.self)
         
+        //realm database file address for debugging purposes
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         if drinkItems!.count <= 0 {
@@ -34,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 newDrink.notes = "Favorite drink!"
                 newDrink.liquorType = "Whiskey"
                 newDrink.rating = 5
+                newDrink.photo = storeImage(image: #imageLiteral(resourceName: "manhattan"))
                 realm.add(newDrink)
                 
                 let newDrink2 = Drinks()
@@ -43,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 newDrink2.notes = "Everyones doing it"
                 newDrink2.liquorType = "Tequila"
                 newDrink2.rating = 4
+                newDrink2.photo = storeImage(image: #imageLiteral(resourceName: "newMarg"))
                 realm.add(newDrink2)
                 
                 let newDrink3 = Drinks()
@@ -52,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 newDrink3.notes = "Perfect for hot days"
                 newDrink3.liquorType = "Rum"
                 newDrink3.rating = 5
+                newDrink3.photo = storeImage(image: #imageLiteral(resourceName: "mojito"))
                 realm.add(newDrink3)
                 
                 let newDrink4 = Drinks()
@@ -61,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 newDrink4.notes = "For when you're feeling fancy"
                 newDrink4.liquorType = "Vodka"
                 newDrink4.rating = 3
+                newDrink4.photo = storeImage(image: #imageLiteral(resourceName: "cosmopolitan"))
                 realm.add(newDrink4)
                 
                 let newDrink5 = Drinks()
@@ -70,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 newDrink5.notes = "Delicious but hard to find a bar that will make it"
                 newDrink5.liquorType = "Gin"
                 newDrink5.rating = 5
+                newDrink5.photo = storeImage(image: #imageLiteral(resourceName: "kiwigimlet"))
                 realm.add(newDrink5)
             }
         } catch {
@@ -77,9 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
             
         }
-        
-        
-        
         return true
     }
 
@@ -106,6 +109,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 
+    func storeImage (image : UIImage) -> String {
+        let fileManager = FileManager.default
+        let randomPath = randomString()
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(randomPath).png")
+        
+        let data = UIImagePNGRepresentation(image)
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        
+        return "\(randomPath).png"
+    }
+    
+    func randomString() -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< 10 {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
 
 }
 
