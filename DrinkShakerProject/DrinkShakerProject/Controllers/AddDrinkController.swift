@@ -9,11 +9,10 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var getNotes: UITextView!
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
-    
     @IBOutlet weak var getPhoto: UIImageView!
-    
     @IBOutlet weak var imageLabel: UILabel!
     
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,20 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         resetView()
     }
     
-    @IBAction func saveButton(_ sender: Any) {
+    @IBAction func saveButton(_ sender: UIButton) {
+        do {
+            try self.realm.write {
+                var newDrink = Drinks()
+                newDrink.name = getName.text!
+                newDrink.location = getLocation.text!
+                newDrink.ingredients = getIngredients.text!
+                newDrink.notes = getNotes.text!
+                realm.add(newDrink)
+            }
+        }
+        catch {
+            print("Error saving new items, \(error)")
+        }
         resetView()
     }
     
@@ -64,15 +76,5 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         getRating.text = "Enter a rating between 1 and 5"
         getIngredients.text = "Enter Ingredients"
     }
-    
-    var text = ""
-    @IBAction func getValues ()
-    {
-        text = getName.text!
-    }
-    
-    let realm = try! Realm()
-    
-    
-   // let drink = Drinks()
+
 }

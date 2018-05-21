@@ -11,31 +11,36 @@ import RealmSwift
 
 class AllDrinksController: UITableViewController {
     
+    var drinkItems: Results<Drinks>?
+    
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        loadDrinks()
     }
     
-/*    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return drinkItems?.count ?? 1
     }
-    */
+    
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //
 //    }
 //
+    
+    func loadDrinks() {
+        drinkItems = realm.objects(Drinks.self)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! customCell
 
-//      let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell") as! customCell
-
+        cell.drinkName?.text = drinkItems?[indexPath.row].name ?? "No Drinks in Recipe Book"
         cell.photo.image = #imageLiteral(resourceName: "cosmo")
         cell.rating.text = "Rating: 1/5"
         cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
