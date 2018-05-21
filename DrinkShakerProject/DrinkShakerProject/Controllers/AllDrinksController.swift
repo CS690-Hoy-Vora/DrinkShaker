@@ -32,8 +32,12 @@ class AllDrinksController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DrinkInfoController
-        
-        destinationVC.indexPath = Int(tableView.indexPathForSelectedRow!.row)
+        if segue.identifier == "toDrinkInfo" {
+            destinationVC.indexPath = Int(tableView.indexPathForSelectedRow!.row)
+        }
+        else if segue.identifier == "toDrinkInfoRandom" {
+            destinationVC.indexPath = Int(arc4random_uniform(UInt32(drinkItems!.count)))
+        }
     }
 
     
@@ -60,8 +64,8 @@ class AllDrinksController: UITableViewController {
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        print("SHaken!!!!!!")
+        
+        performSegue(withIdentifier: "toDrinkInfoRandom", sender: self)
+        
     }
-    
-    
 }

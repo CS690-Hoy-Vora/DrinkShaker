@@ -16,7 +16,7 @@ class Drinks : Object {
     @objc dynamic var location : String = ""
     @objc dynamic var notes : String = ""
     @objc dynamic var liquorType : String = ""
-    //@objc dynamic var photo : String = ""
+    @objc dynamic var photo : String = ""
  
 }
 
