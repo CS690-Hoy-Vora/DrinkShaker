@@ -79,7 +79,6 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     }
    
     func liquorTypeChosen(liquorType: String) {
-        print(liquorType)
         liquorTypeReceived = liquorType
     }
     
