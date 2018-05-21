@@ -324,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0A-Yt-7m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639.20000000000005" y="1729.8029556650247"/>
+            <point key="canvasLocation" x="-1153" y="1711"/>
         </scene>
         <!--All Drinks-->
         <scene sceneID="oXm-su-J8w">
@@ -591,7 +591,16 @@
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
+                                    <action selector="testLiquorType:" destination="oQT-Gd-BFY" eventType="touchUpInside" id="L6b-9O-8MX"/>
                                     <segue destination="lay-S2-eyK" kind="presentation" id="O9W-9U-9Dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfC-dL-1fU">
+                                <rect key="frame" x="242" y="54" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="liquorTypeTest:" destination="oQT-Gd-BFY" eventType="touchUpInside" id="jfb-fo-rLQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -777,7 +786,7 @@
                                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oQT-Gd-BFY" kind="presentation" id="haI-le-GVc"/>
+                                            <segue destination="oQT-Gd-BFY" kind="presentation" identifier="Vodka" id="haI-le-GVc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGj-g2-2gk">
@@ -788,7 +797,7 @@
                                             <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oQT-Gd-BFY" kind="presentation" id="xw9-1P-Fv5"/>
+                                            <segue destination="oQT-Gd-BFY" kind="presentation" identifier="Tequila" id="xw9-1P-Fv5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-aw-sZF">
@@ -797,7 +806,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <state key="normal" title="Rum" backgroundImage="mojito"/>
                                         <connections>
-                                            <segue destination="oQT-Gd-BFY" kind="presentation" id="NDM-eO-Y1D"/>
+                                            <segue destination="oQT-Gd-BFY" kind="presentation" identifier="Rum" id="NDM-eO-Y1D"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF5-Rb-H8d">
@@ -808,7 +817,7 @@
                                             <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oQT-Gd-BFY" kind="presentation" id="5Zq-yx-pOi"/>
+                                            <segue destination="oQT-Gd-BFY" kind="presentation" identifier="Whiskey" id="5Zq-yx-pOi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNz-Yp-M60">
@@ -819,7 +828,7 @@
                                             <color key="titleColor" red="0.90304234268337813" green="0.92935490608215332" blue="0.3574655348821803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="oQT-Gd-BFY" kind="presentation" id="D67-8m-93b"/>
+                                            <segue destination="oQT-Gd-BFY" kind="presentation" identifier="Gin" id="D67-8m-93b"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -860,7 +869,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O9W-9U-9Dt"/>
-        <segue reference="xw9-1P-Fv5"/>
+        <segue reference="D67-8m-93b"/>
         <segue reference="bmg-Dh-7rm"/>
     </inferredMetricsTieBreakers>
 </document>
