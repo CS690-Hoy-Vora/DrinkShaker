@@ -51,7 +51,7 @@ class AllDrinksController: UITableViewController {
 
         cell.drinkName?.text = drinkItems?[indexPath.row].name ?? "No Drinks in Recipe Book"
         cell.ingredients?.text = drinkItems?[indexPath.row].ingredients
-        cell.rating?.text = "\(drinkItems![indexPath.row].rating)/5"
+        cell.rating?.text = "Rating: \(drinkItems![indexPath.row].rating)/5"
 //        cell.photo.image = #imageLiteral(resourceName: "cosmo")
 //        cell.rating.text = "Rating: 1/5"
 //        cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
