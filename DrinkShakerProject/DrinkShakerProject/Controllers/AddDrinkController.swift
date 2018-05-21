@@ -10,16 +10,14 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var getRating: UITextField!
     @IBOutlet weak var getIngredients: UITextView!
     
-    @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var getPhoto: UIImageView!
     
     @IBOutlet weak var imageLabel: UILabel!
-    @IBOutlet weak var clearButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetView()
         getNotes.delegate = self
         getIngredients.delegate = self
     }
@@ -47,6 +45,24 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
+    }
+    @IBAction func clearButton(_ sender: Any) {
+        resetView()
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        resetView()
+    }
+    
+    
+    
+    //resets the view to its original state
+    func resetView(){
+        getName.text = "Enter Drink Name"
+        getLocation.text = "Enter Where to Buy From"
+        getNotes.text = "Additional Notes"
+        getRating.text = "Enter a rating between 1 and 5"
+        getIngredients.text = "Enter Ingredients"
     }
     
     var text = ""
