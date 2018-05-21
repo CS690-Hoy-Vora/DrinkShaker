@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5zg-kJ-FDq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5zg-kJ-FDq">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -343,7 +343,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="167.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIl-S9-qae">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EIl-S9-qae">
                                             <rect key="frame" x="16" y="0.0" width="100" height="91"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfx-lu-gZe">
@@ -371,12 +371,14 @@
                                     <constraints>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="top" secondItem="EIl-S9-qae" secondAttribute="top" id="0uK-nu-xUn"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="leading" secondItem="Svd-lM-hYM" secondAttribute="leading" constant="124" id="414-uS-Bvo"/>
+                                        <constraint firstItem="EIl-S9-qae" firstAttribute="leading" secondItem="Svd-lM-hYM" secondAttribute="leadingMargin" id="C5L-PO-Ad8"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="leading" secondItem="qmO-sE-BUu" secondAttribute="leading" id="GmX-a0-g6R"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="leading" secondItem="EIl-S9-qae" secondAttribute="trailing" constant="8" symbolic="YES" id="Oip-h9-pcp"/>
                                         <constraint firstItem="mQV-zB-9rc" firstAttribute="leading" secondItem="kfx-lu-gZe" secondAttribute="trailing" constant="8" symbolic="YES" id="QqT-rS-E6M"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="baseline" secondItem="mQV-zB-9rc" secondAttribute="baseline" id="Uf5-ye-5bq"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="top" secondItem="Svd-lM-hYM" secondAttribute="top" id="ai5-d0-h4Q"/>
                                         <constraint firstItem="qmO-sE-BUu" firstAttribute="top" secondItem="kfx-lu-gZe" secondAttribute="bottom" constant="8" symbolic="YES" id="oHZ-n0-Gxv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="EIl-S9-qae" secondAttribute="bottom" constant="66" id="ueZ-Wa-HCw"/>
                                         <constraint firstItem="kfx-lu-gZe" firstAttribute="leading" secondItem="EIl-S9-qae" secondAttribute="trailing" constant="8" id="z2C-C6-adX"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -414,7 +416,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnp-0u-IzN">
-                                <rect key="frame" x="40" y="271" width="144" height="73"/>
+                                <rect key="frame" x="40" y="320" width="144" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="sxj-9w-cBT"/>
                                 </constraints>
@@ -429,7 +431,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNn-on-LWr">
-                                <rect key="frame" x="253" y="269" width="114" height="39"/>
+                                <rect key="frame" x="253" y="318" width="114" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Y6T-Yc-6q4"/>
                                 </constraints>
@@ -457,10 +459,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manhattan" translatesAutoresizingMaskIntoConstraints="NO" id="iu8-fY-k3k">
-                                <rect key="frame" x="99" y="44" width="203" height="219"/>
+                                <rect key="frame" x="99" y="44" width="203" height="268"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-qG-Qaf">
-                                <rect key="frame" x="40" y="642" width="335" height="51"/>
+                                <rect key="frame" x="40" y="691" width="335" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="agb-oX-d01"/>
                                 </constraints>
@@ -513,16 +515,16 @@
         <scene sceneID="jfT-cv-Lbr">
             <objects>
                 <viewController id="oQT-Gd-BFY" customClass="CategoryChosenController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CeG-hn-ce4" customClass="cate">
+                    <view key="view" contentMode="scaleToFill" id="CeG-hn-ce4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-g8-tux">
-                                <rect key="frame" x="0.0" y="97" width="375" height="521"/>
+                                <rect key="frame" x="0.0" y="97" width="375" height="660"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="catgoryDrinks" rowHeight="144" id="SWh-7o-ezG" customClass="categoryViewCell" customModule="DrinkShakerProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="catgoryDrinks" rowHeight="144" id="SWh-7o-ezG" customClass="customCellForCategories" customModule="DrinkShakerProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWh-7o-ezG" id="VuX-jq-XI1">
@@ -577,10 +579,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="catDrinkName" destination="Nxi-ql-Uoy" id="CXO-7V-Cf7"/>
-                                            <outlet property="catDrinkRating" destination="Ibn-JX-fZs" id="tVV-6j-pgb"/>
-                                            <outlet property="catDrinkRecipe" destination="aqV-W6-hhD" id="cGa-1P-zEa"/>
-                                            <outlet property="catImage" destination="rsd-P9-9d5" id="MwW-bm-RdX"/>
+                                            <outlet property="drinkImage" destination="rsd-P9-9d5" id="XS8-0V-C0r"/>
+                                            <outlet property="drinkName" destination="Nxi-ql-Uoy" id="MtV-1i-bcj"/>
+                                            <outlet property="drinkRating" destination="Ibn-JX-fZs" id="7DE-Kh-8mC"/>
+                                            <outlet property="drinkRecipe" destination="aqV-W6-hhD" id="RO1-cK-EcT"/>
+                                            <segue destination="agL-xP-wqa" kind="show" identifier="toDrinkInfoFromCategory" id="zJF-fl-Qei"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -598,74 +601,13 @@
                         <viewLayoutGuide key="safeArea" id="vma-Mn-9K2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" id="2Wk-GX-kMr"/>
+                    <connections>
+                        <outlet property="tableView2" destination="OEh-g8-tux" id="tsv-Rs-Ap6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n8I-9Y-6TQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.60000000000002" y="393.55322338830587"/>
-        </scene>
-        <!--Popup View Controller-->
-        <scene sceneID="qj8-0A-feO">
-            <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="jLA-mJ-dA6" customClass="PopupViewController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hju-5X-rM3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-LZ-ien">
-                                <rect key="frame" x="119" y="69" width="240" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sort By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-xq-SWd">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Us-q5-47q">
-                                        <rect key="frame" x="0.0" y="60" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Liquor Type"/>
-                                        <connections>
-                                            <action selector="LiquorClosePopUp:" destination="jLA-mJ-dA6" eventType="touchUpInside" id="oql-sv-6ok"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APG-u1-LA3">
-                                        <rect key="frame" x="0.0" y="92" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Rating (High to Low)"/>
-                                        <connections>
-                                            <action selector="RatingHtoLClosePopUp:" destination="jLA-mJ-dA6" eventType="touchUpInside" id="bE7-en-op3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-4G-OFa">
-                                        <rect key="frame" x="0.0" y="29" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Alphabetical"/>
-                                        <connections>
-                                            <action selector="AlphabeticlaClosePopUp:" destination="jLA-mJ-dA6" eventType="touchUpInside" id="bVt-UK-Db4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-k6-1e6">
-                                        <rect key="frame" x="0.0" y="120" width="240" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Rating (Low to High)"/>
-                                        <connections>
-                                            <action selector="RatingLtoHClosePopUp:" destination="jLA-mJ-dA6" eventType="touchUpInside" id="RtN-tj-4aE"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.27426276408450706" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.24694652288732394" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="ZTr-PO-Z50"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HWm-0N-gPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1727" y="404"/>
+            <point key="canvasLocation" x="885.60000000000002" y="393.10344827586209"/>
         </scene>
         <!--Splash Controller-->
         <scene sceneID="1B2-Zk-dEM">
@@ -853,6 +795,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="haI-le-GVc"/>
-        <segue reference="bmg-Dh-7rm"/>
+        <segue reference="zJF-fl-Qei"/>
     </inferredMetricsTieBreakers>
 </document>

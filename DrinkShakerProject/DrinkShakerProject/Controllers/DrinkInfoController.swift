@@ -12,6 +12,7 @@ class DrinkInfoController: UIViewController {
     @IBOutlet weak var infoRecipe: UILabel!
     
     var indexPath : Int = 0
+    var possibleLiquorType : String = ""
     
     let realm = try! Realm()
     
@@ -24,13 +25,25 @@ class DrinkInfoController: UIViewController {
     }
     
     func loadDrink() {
-        drinkItems = realm.objects(Drinks.self)
-        drinkInfoName.text = "Drink Name:\n\(drinkItems![indexPath].name)"
-        infoNotes.text = "Notes:\n\(drinkItems![indexPath].notes)"
-        infoRating.text = "Rating: \(String(drinkItems![indexPath].rating))/5"
-        infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
-        infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
-        drinkInfoPhoto.image = getImage(index: indexPath)
+        
+        if possibleLiquorType != "" {
+            drinkItems = realm.objects(Drinks.self).filter("liquorType = '\(possibleLiquorType)'")
+            drinkInfoName.text = "Drink Name:\n\(drinkItems![indexPath].name)"
+            infoNotes.text = "Notes:\n\(drinkItems![indexPath].notes)"
+            infoRating.text = "Rating: \(String(drinkItems![indexPath].rating))/5"
+            infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
+            infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
+            drinkInfoPhoto.image = getImage(index: indexPath)
+        }
+        else {
+            drinkItems = realm.objects(Drinks.self)
+            drinkInfoName.text = "Drink Name:\n\(drinkItems![indexPath].name)"
+            infoNotes.text = "Notes:\n\(drinkItems![indexPath].notes)"
+            infoRating.text = "Rating: \(String(drinkItems![indexPath].rating))/5"
+            infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
+            infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
+            drinkInfoPhoto.image = getImage(index: indexPath)
+        }
     }
     
     func getImage(index : Int) -> UIImage {
