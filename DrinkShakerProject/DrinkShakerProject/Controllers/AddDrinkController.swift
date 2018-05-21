@@ -30,12 +30,9 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         getPhoto.image = chosenImage
-        imageLabel.isHidden = true
         dismiss(animated: true, completion: nil)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    @IBAction func addPhoto(_ sender: Any) {
         let controller = UIImagePickerController()
         controller.delegate = self
         controller.sourceType = .photoLibrary
@@ -43,6 +40,15 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         present(controller, animated: true, completion: nil)
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//
+//        let controller = UIImagePickerController()
+//        controller.delegate = self
+//        controller.sourceType = .photoLibrary
+//
+//        present(controller, animated: true, completion: nil)
+//    }
+//
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
@@ -63,6 +69,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         getNotes.text = "Additional Notes"
         getRating.text = "Enter a rating between 1 and 5"
         getIngredients.text = "Enter Ingredients"
+        getPhoto.image = nil
     }
     
     var text = ""
