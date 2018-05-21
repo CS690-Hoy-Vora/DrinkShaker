@@ -18,7 +18,7 @@ class AllDrinksController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
-        
+        self.view.backgroundColor = UIColor.darkGray
         loadDrinks()
     }
     
