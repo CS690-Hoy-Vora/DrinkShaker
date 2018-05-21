@@ -1,15 +1,9 @@
-//
-//  customCell.swift
-//  DrinkShakerProject
-//
-//  Created by Lina Del Bondio on 5/15/18.
-//  Copyright © 2018 Shayn. All rights reserved.
-//
+// Cell for table view in the All Drinks Controller class and view
 
 import UIKit
 
 class customCell: UITableViewCell {
-
+    
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var drinkName: UILabel!
     @IBOutlet weak var rating: UILabel!
@@ -18,11 +12,11 @@ class customCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

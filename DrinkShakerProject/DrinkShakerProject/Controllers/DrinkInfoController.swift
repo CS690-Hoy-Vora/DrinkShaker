@@ -1,4 +1,4 @@
-
+// For the individual drink information page
 import UIKit
 import RealmSwift
 
@@ -20,11 +20,15 @@ class DrinkInfoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         loadDrink()
     }
     
     func loadDrink() {
+        
+        // Logic handling in order to show the correct drink information
+        // Depending on whether this view is reached through the All Drinks Page
+        // Or through the categories page
         
         if possibleLiquorType != "" {
             drinkItems = realm.objects(Drinks.self).filter("liquorType = '\(possibleLiquorType)'")

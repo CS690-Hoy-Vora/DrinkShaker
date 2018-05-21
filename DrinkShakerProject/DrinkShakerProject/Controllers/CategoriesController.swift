@@ -1,3 +1,5 @@
+// This page just lists the categories, and when a category is selected,
+// Sends the selected category to the Category Chosen controller
 
 import UIKit
 import RealmSwift

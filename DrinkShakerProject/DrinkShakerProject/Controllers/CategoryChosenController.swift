@@ -1,3 +1,4 @@
+// Lists all the drinks depending on liquor type chosen
 
 import UIKit
 import RealmSwift
@@ -27,7 +28,7 @@ class CategoryChosenController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDrinkInfoFromCategory", sender: self)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DrinkInfoController
         destinationVC.possibleLiquorType = liquorType!
@@ -64,10 +65,10 @@ class CategoryChosenController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-
+    
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-
+        
     }
     
 }
