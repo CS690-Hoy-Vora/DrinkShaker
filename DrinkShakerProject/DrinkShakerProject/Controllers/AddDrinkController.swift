@@ -27,6 +27,10 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         controller.delegate = self
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -70,8 +74,19 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         present(controller, animated: true, completion: nil)
     }
     
+    @IBAction func setLiquorBtnPushed(_ sender: Any) {
+        performSegue(withIdentifier: "liquorTypeSegue", sender: nil)
+    }
+   
     func liquorTypeChosen(liquorType: String) {
+        print(liquorType)
         liquorTypeReceived = liquorType
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LiquorChoiceViewController {
+            destination.delegate = self
+        }
     }
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //
