@@ -1,10 +1,3 @@
-//
-//  AllDrinksController.swift
-//  DrinkShakerProject
-//
-//  Created by Lina Del Bondio on 5/15/18.
-//  Copyright © 2018 Shayn. All rights reserved.
-//
 
 import UIKit
 import RealmSwift
@@ -18,8 +11,9 @@ class AllDrinksController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 200
-        
+        self.view.backgroundColor = UIColor.darkGray
         loadDrinks()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadDrinks), name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,8 +35,9 @@ class AllDrinksController: UITableViewController {
     }
 
     
-    func loadDrinks() {
+    @objc func loadDrinks() {
         drinkItems = realm.objects(Drinks.self)
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,14 +46,7 @@ class AllDrinksController: UITableViewController {
 
         cell.drinkName?.text = drinkItems?[indexPath.row].name ?? "No Drinks in Recipe Book"
         cell.ingredients?.text = drinkItems?[indexPath.row].ingredients
-        cell.rating?.text = "\(drinkItems![indexPath.row].rating)/5"
-//        cell.photo.image = #imageLiteral(resourceName: "cosmo")
-//        cell.rating.text = "Rating: 1/5"
-//        cell.ingredients.text = "1/2 oz lemon juice \n4oz booze"
-//        cell.textLabel?.text = drink
-
-//        performSegue(withIdentifier: "drinkInfoSegue", sender: self)
-
+        cell.rating?.text = "Rating: \(drinkItems![indexPath.row].rating)/5"
 
         return cell
     }

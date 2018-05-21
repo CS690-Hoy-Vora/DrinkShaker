@@ -27,7 +27,7 @@ class DrinkInfoController: UIViewController {
         drinkItems = realm.objects(Drinks.self)
         drinkInfoName.text = "Drink Name:\n\(drinkItems![indexPath].name)"
         infoNotes.text = "Notes:\n\(drinkItems![indexPath].notes)"
-        infoRating.text = "Rating: 1/\(String(drinkItems![indexPath].rating))"
+        infoRating.text = "Rating: \(String(drinkItems![indexPath].rating))/5"
         infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
         infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
     }

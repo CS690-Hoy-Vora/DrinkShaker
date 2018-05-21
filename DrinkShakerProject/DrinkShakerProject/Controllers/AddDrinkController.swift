@@ -104,6 +104,8 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.liquorType = liquorTypeReceived
                 
                 realm.add(newDrink)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+
             }
         }
         catch {
