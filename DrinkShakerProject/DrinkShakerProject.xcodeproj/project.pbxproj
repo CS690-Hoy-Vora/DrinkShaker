@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4496520B35184980DE082B63 /* Pods_DrinkShakerProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BABAC8718E2435518BBA2F /* Pods_DrinkShakerProjectTests.framework */; };
 		5104010920AB9FB000E29DE4 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104010820AB9FB000E29DE4 /* Drinks.swift */; };
+		514F649020B298AD003F4854 /* CategoryChosenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F648F20B298AD003F4854 /* CategoryChosenController.swift */; };
+		514F649220B33736003F4854 /* customCellForCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514F649120B33736003F4854 /* customCellForCategories.swift */; };
 		8B05B0CB20AF8524003C1AED /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05B0CA20AF8523003C1AED /* SplashController.swift */; };
 		8B0AF02920B23BC400039BFC /* LiquorChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF02820B23BC400039BFC /* LiquorChoiceViewController.swift */; };
 		8B8CBA792086AD310032E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CBA782086AD310032E867 /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 		196BCB4224FB5CF5EC6A9F44 /* Pods-DrinkShakerProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProjectTests/Pods-DrinkShakerProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		45BABAC8718E2435518BBA2F /* Pods_DrinkShakerProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinkShakerProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5104010820AB9FB000E29DE4 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
+		514F648F20B298AD003F4854 /* CategoryChosenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryChosenController.swift; path = DrinkShakerProject/Controllers/CategoryChosenController.swift; sourceTree = SOURCE_ROOT; };
+		514F649120B33736003F4854 /* customCellForCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCellForCategories.swift; sourceTree = "<group>"; };
 		742CE2316C6578549F693A3D /* Pods-DrinkShakerProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkShakerProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkShakerProject/Pods-DrinkShakerProject.release.xcconfig"; sourceTree = "<group>"; };
 		8B05B0CA20AF8523003C1AED /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8B0AF02820B23BC400039BFC /* LiquorChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquorChoiceViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				8B8CBA7A2086AD310032E867 /* ViewController.swift */,
 				8BC96E6320AB494D0055BEE8 /* AllDrinksController.swift */,
 				8BC96E6520AB4F5B0055BEE8 /* CategoriesController.swift */,
+				514F648F20B298AD003F4854 /* CategoryChosenController.swift */,
 				8BC96E6720AB4F800055BEE8 /* AddDrinkController.swift */,
 				8BC96E6920AB4F970055BEE8 /* AboutController.swift */,
 				8BC96E6E20AB77F80055BEE8 /* DrinkInfoController.swift */,
@@ -167,6 +172,7 @@
 			children = (
 				8BC96E6120AB41470055BEE8 /* customCell.swift */,
 				5104010820AB9FB000E29DE4 /* Drinks.swift */,
+				514F649120B33736003F4854 /* customCellForCategories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,10 +363,12 @@
 			files = (
 				8BA0AD6220B1C3CB003CC99B /* PopupViewController.swift in Sources */,
 				8BC96E6420AB494D0055BEE8 /* AllDrinksController.swift in Sources */,
+				514F649220B33736003F4854 /* customCellForCategories.swift in Sources */,
 				8B8CBA7B2086AD310032E867 /* ViewController.swift in Sources */,
 				8BC96E6820AB4F800055BEE8 /* AddDrinkController.swift in Sources */,
 				8BC96E6220AB41470055BEE8 /* customCell.swift in Sources */,
 				8BC96E6620AB4F5B0055BEE8 /* CategoriesController.swift in Sources */,
+				514F649020B298AD003F4854 /* CategoryChosenController.swift in Sources */,
 				5104010920AB9FB000E29DE4 /* Drinks.swift in Sources */,
 				8B05B0CB20AF8524003C1AED /* SplashController.swift in Sources */,
 				8BC96E6F20AB77F80055BEE8 /* DrinkInfoController.swift in Sources */,
@@ -521,11 +529,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N78J6BJEHS;
+				DEVELOPMENT_TEAM = 7PUCZSEX47;
 				INFOPLIST_FILE = DrinkShakerProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoy.DrinkShakerProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RushVora.DrinkShakerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -538,11 +546,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N78J6BJEHS;
+				DEVELOPMENT_TEAM = 7PUCZSEX47;
 				INFOPLIST_FILE = DrinkShakerProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoy.DrinkShakerProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RushVora.DrinkShakerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
