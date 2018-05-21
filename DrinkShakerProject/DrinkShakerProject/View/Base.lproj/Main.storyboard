@@ -63,7 +63,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jFL-1p-Gwv" kind="presentation" id="vFy-MR-6RP"/>
+                                    <action selector="setLiquorBtnPushed:" destination="JMQ-Qv-reS" eventType="touchUpInside" id="0Tc-ep-Nt8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSf-ar-oMQ">
@@ -151,11 +151,12 @@
                         <outlet property="getNotes" destination="qlj-rQ-b4R" id="Bnz-aS-Gng"/>
                         <outlet property="getPhoto" destination="Mbd-1H-77q" id="lyI-af-zN5"/>
                         <outlet property="getRating" destination="wqk-Es-qcp" id="Pzo-RQ-jOv"/>
+                        <segue destination="jFL-1p-Gwv" kind="presentation" identifier="liquorTypeSegue" id="AN8-c9-JnV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyU-JW-89W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="1033.1334332833585"/>
+            <point key="canvasLocation" x="-94" y="1315"/>
         </scene>
         <!--Liquor Choice View Controller-->
         <scene sceneID="cht-Si-mQC">
@@ -280,11 +281,12 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Drink Shaker is an application for storing drink recipes and their relevant information" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKM-st-UDf">
-                                <rect key="frame" x="74" y="140" width="227" height="115"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKM-st-UDf">
+                                <rect key="frame" x="74" y="112" width="227" height="135"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="5u0-A6-y99"/>
+                                    <constraint firstAttribute="height" constant="135" id="5u0-A6-y99"/>
                                 </constraints>
+                                <string key="text">The Drink Shaker is an application for storing drink recipes and their relevant information (Hint: SHake your phone on the All drinks tab for a surprise!)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -307,7 +309,7 @@
                             <constraint firstItem="2wx-cO-qsc" firstAttribute="leading" secondItem="S4y-AZ-PJ7" secondAttribute="leading" id="OxK-bl-3k9"/>
                             <constraint firstItem="KMl-qx-31a" firstAttribute="bottom" secondItem="S4y-AZ-PJ7" secondAttribute="bottom" constant="45" id="Q1U-cc-1hS"/>
                             <constraint firstItem="S4y-AZ-PJ7" firstAttribute="top" secondItem="2wx-cO-qsc" secondAttribute="bottom" constant="15" id="SdO-Vq-b3w"/>
-                            <constraint firstItem="PKM-st-UDf" firstAttribute="top" secondItem="agj-zC-Exy" secondAttribute="bottom" constant="47" id="T8U-Vp-FQc"/>
+                            <constraint firstItem="PKM-st-UDf" firstAttribute="top" secondItem="agj-zC-Exy" secondAttribute="bottom" constant="19" id="T8U-Vp-FQc"/>
                             <constraint firstItem="KMl-qx-31a" firstAttribute="trailing" secondItem="S4y-AZ-PJ7" secondAttribute="trailing" constant="71" id="Tjq-IK-Qib"/>
                             <constraint firstItem="agj-zC-Exy" firstAttribute="centerX" secondItem="PKM-st-UDf" secondAttribute="centerX" id="X7o-93-VFI"/>
                             <constraint firstItem="PKM-st-UDf" firstAttribute="leading" secondItem="KMl-qx-31a" secondAttribute="leading" constant="74" id="bzK-bU-4OV"/>
@@ -420,8 +422,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sas-6z-3df">
-                                <rect key="frame" x="40" y="352" width="200" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sas-6z-3df">
+                                <rect key="frame" x="40" y="352" width="200" height="163"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -435,8 +437,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAq-n6-bJm">
-                                <rect key="frame" x="40" y="562" width="200" height="137"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAq-n6-bJm">
+                                <rect key="frame" x="40" y="523" width="200" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="Hja-Rl-sVb"/>
                                 </constraints>
@@ -454,8 +456,11 @@
                                     <action selector="backButton:" destination="agL-xP-wqa" eventType="touchUpInside" id="k4J-0l-u6p"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manhattan" translatesAutoresizingMaskIntoConstraints="NO" id="iu8-fY-k3k">
+                                <rect key="frame" x="99" y="44" width="203" height="219"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-qG-Qaf">
-                                <rect key="frame" x="40" y="707" width="335" height="51"/>
+                                <rect key="frame" x="40" y="642" width="335" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="agb-oX-d01"/>
                                 </constraints>
@@ -463,15 +468,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manhattan" translatesAutoresizingMaskIntoConstraints="NO" id="iu8-fY-k3k">
-                                <rect key="frame" x="99" y="44" width="203" height="219"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.59638041257858276" green="0.98158717155456543" blue="0.99496078491210938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Kjq-cS-vy0" firstAttribute="top" secondItem="iu8-fY-k3k" secondAttribute="top" id="0Bf-pY-BJG"/>
                             <constraint firstItem="Sas-6z-3df" firstAttribute="leading" secondItem="kAq-n6-bJm" secondAttribute="leading" id="2Hp-Le-KOo"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="B4A-qG-Qaf" secondAttribute="bottom" constant="-29" id="6QC-oE-vUP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="B4A-qG-Qaf" secondAttribute="bottom" constant="36" id="6QC-oE-vUP"/>
                             <constraint firstItem="B4A-qG-Qaf" firstAttribute="top" secondItem="kAq-n6-bJm" secondAttribute="bottom" constant="8" symbolic="YES" id="ALA-Hg-QHG"/>
                             <constraint firstItem="HNn-on-LWr" firstAttribute="leading" secondItem="nnp-0u-IzN" secondAttribute="trailing" constant="69" id="Ac4-MM-KWr"/>
                             <constraint firstItem="iu8-fY-k3k" firstAttribute="leading" secondItem="Kjq-cS-vy0" secondAttribute="trailing" constant="53" id="BZx-cl-9LO"/>
@@ -505,12 +507,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9H-Ic-nPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703.20000000000005" y="-335.08245877061472"/>
+            <point key="canvasLocation" x="703.20000000000005" y="-335.46798029556652"/>
         </scene>
         <!--Categories-->
         <scene sceneID="jfT-cv-Lbr">
             <objects>
-                <viewController id="oQT-Gd-BFY" customClass="CategoriesController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oQT-Gd-BFY" customClass="CategoryChosenController" customModule="DrinkShakerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CeG-hn-ce4" customClass="cate">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -857,8 +859,8 @@
         <image name="rosemary" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hrw-a6-8c3"/>
-        <segue reference="NDM-eO-Y1D"/>
+        <segue reference="O9W-9U-9Dt"/>
+        <segue reference="xw9-1P-Fv5"/>
         <segue reference="bmg-Dh-7rm"/>
     </inferredMetricsTieBreakers>
 </document>
