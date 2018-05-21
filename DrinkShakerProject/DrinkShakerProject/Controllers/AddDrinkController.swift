@@ -15,34 +15,39 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     let realm = try! Realm()
     var randomPath : String = ""
     var liquorTypeReceived : String = ""
+    let controller = UIImagePickerController()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resetView()
         getNotes.delegate = self
         getIngredients.delegate = self
+        controller.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        getPhoto.contentMode = .scaleAspectFit
         getPhoto.image = chosenImage
         
         let fileManager = FileManager.default
         randomPath = randomString()
-        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(randomPath)
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(randomPath).png")
         
         let data = UIImagePNGRepresentation(chosenImage)
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
         
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
@@ -64,9 +69,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     @IBAction func addPhoto(_ sender: Any) {
-        let controller = UIImagePickerController()
-        controller.delegate = self
-        controller.sourceType = .photoLibrary
+                controller.sourceType = .photoLibrary
         
         present(controller, animated: true, completion: nil)
     }
@@ -108,12 +111,13 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.location = getLocation.text!
                 newDrink.ingredients = getIngredients.text!
                 newDrink.notes = getNotes.text!
-                newDrink.photo = randomPath
+                newDrink.photo = "\(randomPath).png"
                 
-                let ratingValue : Int = Int(getRating.text!)!
+                if let ratingValue : Int = Int(getRating.text!) {
                 
-                if ratingValue >= 0 && ratingValue <= 5 {
-                    newDrink.rating = ratingValue
+                    if ratingValue >= 0 && ratingValue <= 5 {
+                        newDrink.rating = ratingValue
+                    }
                 }
                 newDrink.liquorType = liquorTypeReceived
                 

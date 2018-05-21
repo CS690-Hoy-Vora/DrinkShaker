@@ -30,7 +30,22 @@ class DrinkInfoController: UIViewController {
         infoRating.text = "Rating: \(String(drinkItems![indexPath].rating))/5"
         infoRecipe.text = "Ingredients:\n\(drinkItems![indexPath].ingredients)"
         infoLocation.text = "Place to buy: \(drinkItems![indexPath].location)"
+        drinkInfoPhoto.image = getImage(index: indexPath)
     }
+    
+    func getImage(index : Int) -> UIImage {
+        let fileManager = FileManager.default
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let imagePath = "\(documentsDirectory)/\(drinkItems![index].photo)"
+        if fileManager.fileExists(atPath: imagePath) && drinkItems![index].photo != ""{
+            return UIImage(contentsOfFile: imagePath)!
+        }
+        else{
+            return #imageLiteral(resourceName: "manhattan")
+        }
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
