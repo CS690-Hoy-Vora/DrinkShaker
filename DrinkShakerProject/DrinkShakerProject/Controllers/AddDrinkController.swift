@@ -1,3 +1,4 @@
+// This controller handles adding new drinks to the realm database
 
 import UIKit
 import RealmSwift
@@ -16,7 +17,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     var liquorTypeReceived : String = ""
     let controller = UIImagePickerController()
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         getPhoto.contentMode = .scaleAspectFit
         getPhoto.image = chosenImage
         
+        //Image is stored in the application's document directory
+        //Image filename is stored as string in Realm database
         let fileManager = FileManager.default
         randomPath = randomString()
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("\(randomPath).png")
@@ -50,6 +53,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         dismiss(animated: true, completion: nil)
     }
     
+    // Method to create a random filename for the image
     func randomString() -> String {
         
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -68,7 +72,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     @IBAction func addPhoto(_ sender: Any) {
-                controller.sourceType = .photoLibrary
+        controller.sourceType = .photoLibrary
         
         present(controller, animated: true, completion: nil)
     }
@@ -76,7 +80,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBAction func setLiquorBtnPushed(_ sender: Any) {
         performSegue(withIdentifier: "liquorTypeSegue", sender: nil)
     }
-   
+    
     func liquorTypeChosen(liquorType: String) {
         liquorTypeReceived = liquorType
     }
@@ -86,19 +90,12 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
             destination.delegate = self
         }
     }
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//        let controller = UIImagePickerController()
-//        controller.delegate = self
-//        controller.sourceType = .photoLibrary
-//
-//        present(controller, animated: true, completion: nil)
-//    }
-//
+  
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
     @IBAction func clearButton(_ sender: Any) {
+        
         resetView()
     }
     
@@ -113,7 +110,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.photo = "\(randomPath).png"
                 
                 if let ratingValue : Int = Int(getRating.text!) {
-                
+                    
                     if ratingValue >= 0 && ratingValue <= 5 {
                         newDrink.rating = ratingValue
                     }
@@ -121,8 +118,9 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.liquorType = liquorTypeReceived
                 
                 realm.add(newDrink)
+                // Tells the other controllers to update their views so that added drinks are shown
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-
+                
             }
         }
         catch {
@@ -133,14 +131,15 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     
-    //resets the view to its original state
+    // resets the view to its original state after drink has been saved
+    
     func resetView(){
-        getName.text = "Enter Drink Name"
+        getName.text = "Enter another Drink Name"
         getLocation.text = "Enter Where to Buy From"
         getNotes.text = "Additional Notes"
         getRating.text = "Enter a rating between 1 and 5"
         getIngredients.text = "Enter Ingredients"
         getPhoto.image = nil
     }
-
+    
 }

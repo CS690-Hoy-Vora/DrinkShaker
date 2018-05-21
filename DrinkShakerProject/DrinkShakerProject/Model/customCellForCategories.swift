@@ -1,10 +1,4 @@
-//
-//  customCellForCategories.swift
-//  DrinkShakerProject
-//
-//  Created by Rushabh Vora on 5/21/18.
-//  Copyright © 2018 Shayn. All rights reserved.
-//
+// Cell for the table view in the Category Chosen Controller and view
 
 import UIKit
 

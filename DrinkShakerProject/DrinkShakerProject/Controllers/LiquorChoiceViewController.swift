@@ -1,10 +1,3 @@
-//
-//  LiquorChoiceViewController.swift
-//  DrinkShakerProject
-//
-//  Created by Lina Del Bondio on 5/20/18.
-//  Copyright © 2018 Shayn. All rights reserved.
-//
 
 import UIKit
 
@@ -13,21 +6,21 @@ protocol SendLiquorTypeDelegate {
 }
 
 class LiquorChoiceViewController: UIViewController {
-
+    
     var delegate : SendLiquorTypeDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func vodkaChoice(_ sender: Any) {
         delegate?.liquorTypeChosen(liquorType: "Vodka")
         dismiss(animated: true, completion: nil)
     }
     
-
+    
     @IBAction func tequilaChoice(_ sender: Any) {
         delegate?.liquorTypeChosen(liquorType: "Tequila")
         dismiss(animated: true, completion: nil)
