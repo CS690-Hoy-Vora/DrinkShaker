@@ -13,16 +13,27 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let realm = try! Realm()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        
         do {
-            _ = try Realm()
+            try self.realm.write {
+                let newDrink = Drinks()
+                newDrink.name = "Manhattan"
+                newDrink.location = "Sand Bar"
+                newDrink.ingredients = "2 oz Bourbon \n2 dash of bitters\nStir with cold ice\nStrain"
+                newDrink.notes = "Favourite drink!"
+                newDrink.liquorType = "Whiskey"
+                newDrink.rating = 5
+                realm.add(newDrink)
+            }
         } catch {
             print("Error initiating new realm, \(error)")
         }
+        
         
         
         return true
