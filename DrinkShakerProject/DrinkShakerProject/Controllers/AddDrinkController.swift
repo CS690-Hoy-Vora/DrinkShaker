@@ -2,7 +2,7 @@
 import UIKit
 import RealmSwift
 
-class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate{
+class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, SendLiquorTypeDelegate {
     
     @IBOutlet weak var getName: UITextField!
     @IBOutlet weak var getLocation: UITextField!
@@ -13,6 +13,8 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var imageLabel: UILabel!
     
     let realm = try! Realm()
+    var randomPath : String = ""
+    var liquorTypeReceived : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,34 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         getPhoto.image = chosenImage
+        
+        let fileManager = FileManager.default
+        randomPath = randomString()
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(randomPath)
+        
+        let data = UIImagePNGRepresentation(chosenImage)
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        
         dismiss(animated: true, completion: nil)
     }
+    
+    func randomString() -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< 10 {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
+    }
+    
+    
     @IBAction func addPhoto(_ sender: Any) {
         let controller = UIImagePickerController()
         controller.delegate = self
@@ -39,6 +67,9 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
         present(controller, animated: true, completion: nil)
     }
     
+    func liquorTypeChosen(liquorType: String) {
+        liquorTypeReceived = liquorType
+    }
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //
 //        let controller = UIImagePickerController()
@@ -63,6 +94,15 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.location = getLocation.text!
                 newDrink.ingredients = getIngredients.text!
                 newDrink.notes = getNotes.text!
+                newDrink.photo = randomPath
+                
+                let ratingValue : Int = Int(getRating.text!)!
+                
+                if ratingValue >= 0 && ratingValue <= 5 {
+                    newDrink.rating = ratingValue
+                }
+                newDrink.liquorType = liquorTypeReceived
+                
                 realm.add(newDrink)
             }
         }
