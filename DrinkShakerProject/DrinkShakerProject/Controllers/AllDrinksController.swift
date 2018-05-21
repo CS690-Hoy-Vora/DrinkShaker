@@ -20,6 +20,7 @@ class AllDrinksController: UITableViewController {
         tableView.rowHeight = 200
         self.view.backgroundColor = UIColor.darkGray
         loadDrinks()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadDrinks), name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,8 +42,9 @@ class AllDrinksController: UITableViewController {
     }
 
     
-    func loadDrinks() {
+    @objc func loadDrinks() {
         drinkItems = realm.objects(Drinks.self)
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

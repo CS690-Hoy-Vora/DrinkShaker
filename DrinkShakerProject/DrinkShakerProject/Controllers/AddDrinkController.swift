@@ -64,6 +64,8 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
                 newDrink.ingredients = getIngredients.text!
                 newDrink.notes = getNotes.text!
                 realm.add(newDrink)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+
             }
         }
         catch {
