@@ -378,7 +378,7 @@
                                     <outlet property="ingredients" destination="qmO-sE-BUu" id="V9U-zS-X12"/>
                                     <outlet property="photo" destination="EIl-S9-qae" id="JQd-uq-z1g"/>
                                     <outlet property="rating" destination="mQV-zB-9rc" id="Frz-4b-TOr"/>
-                                    <segue destination="agL-xP-wqa" kind="show" id="bmg-Dh-7rm"/>
+                                    <segue destination="agL-xP-wqa" kind="show" identifier="toDrinkInfo" id="bmg-Dh-7rm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

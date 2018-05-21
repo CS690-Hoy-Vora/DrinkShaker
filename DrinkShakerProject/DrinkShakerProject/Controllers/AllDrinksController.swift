@@ -26,11 +26,16 @@ class AllDrinksController: UITableViewController {
         return drinkItems?.count ?? 1
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDrinksInfo", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DrinkInfoController
+        
+        destinationVC.indexPath = Int(tableView.indexPathForSelectedRow!.row)
+    }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-//
     
     func loadDrinks() {
         drinkItems = realm.objects(Drinks.self)
@@ -57,4 +62,6 @@ class AllDrinksController: UITableViewController {
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         print("SHaken!!!!!!")
     }
+    
+    
 }
