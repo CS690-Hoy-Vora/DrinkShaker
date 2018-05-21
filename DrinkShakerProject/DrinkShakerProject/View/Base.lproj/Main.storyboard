@@ -384,6 +384,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="All Drinks" id="f9j-V8-nbz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="agL-xP-wqa" kind="presentation" identifier="toDrinkInfoRandom" id="9Ns-7t-d72"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFe-Wu-Oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -832,9 +835,9 @@
         <image name="rosemary" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bmg-Dh-7rm"/>
         <segue reference="O9W-9U-9Dt"/>
-        <segue reference="NDM-eO-Y1D"/>
+        <segue reference="xw9-1P-Fv5"/>
+        <segue reference="9Ns-7t-d72"/>
         <segue reference="Tyv-rY-PFB"/>
     </inferredMetricsTieBreakers>
 </document>

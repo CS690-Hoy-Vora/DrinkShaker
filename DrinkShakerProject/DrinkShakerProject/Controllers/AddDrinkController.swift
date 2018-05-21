@@ -58,7 +58,7 @@ class AddDrinkController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBAction func saveButton(_ sender: UIButton) {
         do {
             try self.realm.write {
-                var newDrink = Drinks()
+                let newDrink = Drinks()
                 newDrink.name = getName.text!
                 newDrink.location = getLocation.text!
                 newDrink.ingredients = getIngredients.text!
