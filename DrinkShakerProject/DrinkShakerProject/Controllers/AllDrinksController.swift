@@ -27,14 +27,13 @@ class AllDrinksController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDrinksInfo", sender: self)
+        performSegue(withIdentifier: "toDrinkInfo", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! DrinkInfoController
         
         destinationVC.indexPath = Int(tableView.indexPathForSelectedRow!.row)
-        destinationVC.indexPath = destinationVC.indexPath - 1
     }
 
     

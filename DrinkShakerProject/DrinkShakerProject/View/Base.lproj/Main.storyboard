@@ -832,6 +832,7 @@
         <image name="rosemary" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bmg-Dh-7rm"/>
         <segue reference="O9W-9U-9Dt"/>
         <segue reference="NDM-eO-Y1D"/>
         <segue reference="Tyv-rY-PFB"/>
